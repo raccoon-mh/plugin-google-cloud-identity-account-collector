@@ -130,6 +130,6 @@ def account_collector_sync(params: dict) -> dict:
     if proxy_env:
         _LOGGER.debug(
             f"** Using proxy in environment variable HTTPS_PROXY/https_proxy: {proxy_env}"
-        )  # src/spaceone/inventory/libs/connector.py _create_http_client
+        )  # src/plugin/connector/base_connector.py _create_http_client
 
     return {"results": AccountCollectorManager(**params).sync()}
